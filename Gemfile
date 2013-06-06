@@ -5,7 +5,7 @@ gem 'dynamic_form', '1.1.4'
 gem 'devise', '~> 2.1.0'
 gem 'cancan', '1.6.7'
 gem 'paperclip', '2.7.0'
-
+gem 'browser-timezone-rails'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
