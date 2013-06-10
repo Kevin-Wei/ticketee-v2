@@ -16,3 +16,4 @@
 /public/system
 
 config/initializers/mail.rb
+.rvmrc

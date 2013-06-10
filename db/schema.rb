@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120814082805) do
+ActiveRecord::Schema.define(:version => 20130610232139) do
 
   create_table "assets", :force => true do |t|
     t.string   "asset_file_name"
@@ -97,7 +97,6 @@ ActiveRecord::Schema.define(:version => 20120814082805) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at",                                :null => false
     t.datetime "updated_at",                                :null => false
-    t.string   "uncomfirmed_email"
     t.string   "confirmation_token"
     t.datetime "confirmed_at"
     t.datetime "confirmation_sent_at"
@@ -105,6 +104,9 @@ ActiveRecord::Schema.define(:version => 20120814082805) do
     t.boolean  "admin",                  :default => false
     t.string   "authentication_token"
     t.integer  "request_count",          :default => 0
+    t.string   "twitter_id"
+    t.string   "twitter_screen_name"
+    t.string   "twitter_display_name"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
