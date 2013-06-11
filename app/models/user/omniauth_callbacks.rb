@@ -1,7 +1,7 @@
 class User < ActiveRecord::Base
   module OmniauthCallbacks
     def find_or_create_for_twitter(response)
-      data = response['extra']['user_hash']
+      data = response['extra']['raw_info']
       if user = User.find_by_twitter_id(data["id"])
         user
       else # Create a user with a stub password.
@@ -16,7 +16,7 @@ class User < ActiveRecord::Base
     end
 
     def find_or_create_for_github(response)
-      data = response['extra']['user_hash']
+      data = response['extra']['raw_info']
       if user = User.find_by_github_id(data["id"])
         user
       else # Create a user with a stub password.
