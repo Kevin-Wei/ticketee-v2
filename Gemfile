@@ -11,7 +11,10 @@ gem 'sqlite3'
 
 gem 'omniauth-twitter',
   :git => 'https://github.com/arunagw/omniauth-twitter.git'
-  
+
+gem 'omniauth-github',
+  :git => 'https://github.com/intridea/omniauth-github'
+    
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
